@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const productCard = button.closest('.product-card');
             const productName = productCard.querySelector('.card-title a').innerText;
-            const productPrice = parseFloat(productCard.querySelector('.item-price').innerText.replace('$', ''));
+            const productPrice = parseFloat(productCard.querySelector('.item-price').innerText.replace('₱', ''));
             addToCart(productName, productPrice);
             updateCartDisplay();
         });
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add to cart button in modal
     modalAddToCartButton.onclick = function() {
         const productName = document.getElementById('modalProductName').innerText;
-        const productPrice = parseFloat(document.getElementById('modalProductPrice').innerText.replace('$', ''));
+        const productPrice = parseFloat(document.getElementById('modalProductPrice').innerText.replace('₱', ''));
         addToCart(productName, productPrice);
         productModal.style.display = 'none';
     };
