@@ -12,6 +12,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,25 +150,16 @@
                   <a class="nav-link me-4 active" href="#billboard">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#company-services">Services</a>
+                  <a class="nav-link me-4" href="shop.html">Shop</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link me-4" href="#mobile-products">Products</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link me-4" cart-link>Cart</a>
+                  <a class="nav-link me-4" href="cart.html">Cart</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link me-4 dropdown-toggle link-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Pages</a>
                   <ul class="dropdown-menu">
                     <li>
                       <a href="about.html" class="dropdown-item">About</a>
-                    </li>
-                    <li>
-                      <a href="shop.html" class="dropdown-item" >Shop</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" class="cart-link">Cart</a>
                     </li>
                     <li>
                       <a href="checkout.html" class="dropdown-item">Checkout</a>
@@ -203,6 +195,75 @@
         </div>
       </nav>
     </header>
+
+    <section>
+      <div class="about-section">
+        <h1>Checkout</h1>
+        <p>Please fill in the details below to complete your purchase.</p>
+    </div>
+
+    <div class="container">
+        <form id="checkout-form">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <h2>Shipping Details</h2>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip Code</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <h2>Payment Details</h2>
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" name="card-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exp-date">Expiration Date</label>
+                            <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="button">Place Order</button>
+        </form>
+    </div>
+
+    </section>
+
     <footer id="footer" class="overflow-hidden">
         <div class="container">
           <div class="row">
@@ -350,5 +411,6 @@
       <script type="text/javascript" src="js/script.js"></script>
       <script src="js/popup.js"></script>
       <script src="js/cart.js"></script>
+      <script src="js/checkout.js"></script>
     </body>
   </html>
