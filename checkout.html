@@ -164,9 +164,6 @@
                     <li>
                       <a href="checkout.html" class="dropdown-item">Checkout</a>
                     </li>
-                    <li>
-                      <a href="contact.html" class="dropdown-item">Contact</a>
-                    </li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -236,31 +233,34 @@
                 </div>
 
                 <div class="column">
-                    <div class="card">
-                        <h2>Payment Details</h2>
-                        <div class="form-group">
-                            <label for="card-name">Name on Card</label>
-                            <input type="text" id="card-name" name="card-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="card-number">Card Number</label>
-                            <input type="text" id="card-number" name="card-number" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exp-date">Expiration Date</label>
-                            <input type="text" id="exp-date" name="exp-date" placeholder="MM/YY" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" required>
-                        </div>
-                    </div>
-                </div>
+                  <div class="card">
+                      <h2>Payment Option</h2>
+                      <div class="form-group">
+                          <a href="#" onclick="showPopup('GCash', '', '')">
+                              <img src="images/icon/gcash.png" alt="GCash">
+                          </a>
+                      </div>
+                      <div class="form-group">
+                          <a href="#" onclick="showPopup('Maya', '', '')">
+                              <img src="images/icon/maya.png" alt="Maya">
+                          </a>
+                      </div>
+                  </div>
+              </div>
             </div>
 
             <button type="submit" class="button">Place Order</button>
         </form>
     </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2 id="payment-title"></h2>
+          <p><strong>Name:</strong> <input type="text" id="name"></p>
+          <p><strong>Number:</strong> <input type="text" id="number"></p>
+          <button onclick="saveChanges()">Continue</button>
+      </div>
+  </div>
 
     </section>
 
@@ -272,7 +272,8 @@
                 <div class="col-lg-3 col-sm-6 pb-3">
                   <div class="footer-menu">
                     <img src="images/main-logo.png" alt="logo">
-                    <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+                    <p>3rd floor Vanessa Olga Building, Malusak Boac Marinduque
+                      (3rd floor of Motortrade Boac Marinduque)</p>
                     <div class="social-links">
                       <ul class="d-flex list-unstyled">
                         <li>
@@ -361,9 +362,9 @@
                 <div class="col-lg-3 col-sm-6 pb-3">
                   <div class="footer-menu contact-item">
                     <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
-                    <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
+                    <p>Do you have any queries or suggestions? <a href="mailto:">chldisty888@gmail.com</a>
                     </p>
-                    <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
+                    <p>If you need support? Just give us a call. <a href="">0999 226 4818</a>
                     </p>
                   </div>
                 </div>
@@ -397,7 +398,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
               <div class="copyright">
-                <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a>
+                <p>© CHL Distri&It Solutions. Design by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a>
                 </p>
               </div>
             </div>
@@ -412,5 +413,6 @@
       <script src="js/popup.js"></script>
       <script src="js/cart.js"></script>
       <script src="js/checkout.js"></script>
+      <script src="js/popup_payment.js"></script>
     </body>
   </html>
